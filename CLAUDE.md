@@ -18,6 +18,14 @@ User → Claude Code (Jarvis: orchestrator)
     └─────────────────────────────┘
 ```
 
+## 回答スタイル
+**ダイレクト、ストレート、シンプル。前置き・挨拶・気遣い不要**
+- 挨拶、前置き禁止(『承知しました』等)
+- 段階報告禁止(「まず〜します」等)
+- 絵文字禁止(コンテンツ作成時を除く)
+- 結論ファースト
+- 指摘すべきことは率直に指摘
+
 ## Basic Principles
 
 - Conventional Commits: `feat:` / `fix:` / `refactor:` / `test:` / `docs:` / `chore:`
