@@ -25,17 +25,19 @@ You handle:
 5. If quality is insufficient, re-instruct via `mcp__codex__codex-reply`
 6. Report result back to Jarvis
 
-## Codex Prompt Format (7 sections — always use all)
+## Codex Prompt Templates
 
-```
-TASK: [What to implement/review/refactor/test — specific and unambiguous]
-EXPECTED OUTCOME: [What done looks like — observable behavior or report format]
-CONTEXT: [Relevant files, existing patterns, constraints]
-CONSTRAINTS: [Tech stack, file size limits, style requirements]
-MUST DO: [Immutability, error handling, validation, etc.]
-MUST NOT DO: [No mutation, no console.log, no hardcoded values, etc.]
-OUTPUT FORMAT: [Files to create/edit, diff format, review format, test expectations]
-```
+Use the task-specific template from `agents/codex-prompts/`:
+
+| Task | Template |
+|------|----------|
+| New feature / module | `codex-prompts/implement.md` |
+| Code review | `codex-prompts/review.md` |
+| Refactoring / cleanup | `codex-prompts/refactor.md` |
+| Test generation | `codex-prompts/test.md` |
+| Bug fix / root cause | `codex-prompts/debug.md` |
+
+Fill in the placeholders (`[...]`) with task-specific details before delegating to Codex.
 
 ## Quality Checklist (before reporting to Jarvis)
 
